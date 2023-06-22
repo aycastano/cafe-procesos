@@ -1,0 +1,99 @@
+/*document.getElementById('btnconsultar').addEventListener('submit',consultar);*/
+
+let refresh = document.getElementById('refresh');
+refresh.addEventListener('click', _ => {
+            location.reload();
+})
+
+
+let muestrasproducto= [];
+let longitud;
+let dataTable;
+let tipoanalisis = "Prueba de taza";
+dataSet=[];
+dataTable=$("#tabla_prueba_taza").DataTable({
+    pageLength : 10,
+    lengthMenu :[[10,15,20,-1],[10,15,20,'Todos']],
+    data:dataSet,
+    columnDefs:[
+        {
+            targets:[0],
+            visible:true,
+        },
+        {
+            targets:-1,
+            defaultContent:"<img src ='resources/icon_ver.png' class='icon_ver' onclick='verMuestra()'>"
+        }
+    ]
+});
+
+//function consultar(){
+   db.collection("Muestrasproducto").get().then((querySnapshot) => {
+    document.getElementById("listamuestrasproducto").innerHTML = '';
+        querySnapshot.forEach((doc) => {  
+            console.log(doc.data());
+                /* console.log(`${doc.id} => ${doc.data()}`);*/
+                muestrasproducto.push(doc.data().tipoanalisis);
+                //muestrasproducto.push(doc.data().presentacionmuestra);
+                muestrasproducto.push(doc.data().nombre);  
+                muestrasproducto.push(doc.data().apellido);  
+                //muestrasproducto.push(doc.data().direccion);
+                //muestrasproducto.push(doc.data().departamento);  
+                //muestrasproducto.push(doc.data().municipio);  
+               // muestrasproducto.push(doc.data().finca);  
+                //muestrasproducto.push(doc.data().codigointerno);
+                //muestrasproducto.push(doc.data().codigoexterno);  
+                muestrasproducto.push(doc.data().codigoproductor);  
+                muestrasproducto.push(doc.data().fecha);  
+                //muestrasproducto.push(doc.data().codigomuestra);  
+                muestrasproducto.push(doc.data().proceso);  
+                muestrasproducto.push(doc.data().humedad);
+                muestrasproducto.push(doc.data().origen); 
+                muestrasproducto.push(doc.data().observaciones);
+                
+                if(doc.data().tipoanalisis == "1"){
+
+                    dataSet =[doc.data().tipoanalisis,doc.data().nombre,doc.data().apellido,doc.data().codigoproductor,
+                        doc.data().fecha,doc.data().proceso,doc.data().humedad,doc.data().origen,doc.data().observaciones];
+                      console.log("dataSet:"+dataSet);
+                      dataTable.rows.add([dataSet]).draw();
+
+                    /*document.getElementById("listamuestrasproducto").innerHTML +=` <tr>
+               
+                    <td>${doc.data().tipoanalisis}</td>
+                    <td>${doc.data().nombre}</td>
+                    <td>${doc.data().apellido}</td>
+                    <td>${doc.data().codigoproductor}</td>
+                    <td>${doc.data().fecha}</td>
+                    <td>${doc.data().proceso}</td>
+                    <td>${doc.data().humedad}</td>
+                    <td>${doc.data().origen}</td>
+                    <td>${doc.data().observaciones}</td>
+                    <td><img src ="resources/icon_ver.png" class="icon_ver" onclick="verMuestra()"></td>
+                 
+                  </tr>`*/
+
+                }
+              
+            });
+    });
+
+    
+    setTimeout(() => {
+    longitud = muestrasproducto.length;
+    console.log("longitud:"+longitud)
+
+    }, 3000);
+
+    
+
+
+    muestrasproducto.forEach((cada ,i,muestrasproducto)=>{
+        console.log("tipo: "+muestrasproducto[i]);
+    })
+    
+
+  
+
+
+//}

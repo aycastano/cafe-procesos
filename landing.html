@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/landing.css">
+     <title>Cafe & Procesos</title>
+</head>
+<body>
+        <header class="header">
+                <table>
+                    <tr>
+                        <td><img class="frame_logo" src="resources/frame_logo.png"></td>
+                        <td><img class="icon_usuario" src="resources/icon_usuario.png"></td>
+                        <td><img class="icon_salir" src="resources/icon_salir.png" onclick="logout()"></td>
+                    </tr>
+                </table>
+        </header>
+    <div class="containerbody">
+        <div class="containerizquierdo">
+            <img class="img" src="resources/btn_muestras_active.png">
+            <img class="imgrepor" src="resources/btn_reportes_off.png">
+        </div>
+        <div class="containerderecho">
+            <div class="lineagris">
+                <div class="muestras">
+                    Muestras<span class="pruebatazauno">></span><span class="pruebataza">Prueba taza</span>
+                    </span>      
+                </div>          
+            </div>
+            <table class="table2">
+                <tr>
+                    <td class="btn1">
+                     
+                    </td>
+                    <td class="btn2">
+                      
+                    </td>
+                    <td class="btn3">
+                        <img src="resources/btn_crear_muestra.png" id ="crearmuestra" onclick="crearMuestra()" class="btncrearmuestra">
+                    </td>
+                    <!--<td class="btn4">
+                        <input src="resources/btn_crear_muestra.png" id="crearmuestra" onclick="crearMuestra()" class="btncrearmuestra"></input>
+                        
+                    </td>-->
+                </tr>
+            </table>
+            <div class="contenedor1">
+                <div class="contenedor">
+                    <ul class="ul">
+                        <li class="li activo" id="refresh">Prueba de taza</li>
+                        <li class="li" onclick="analisisBasico()" id="refresh">Análisis básico</li>
+                        <li class="li" onclick="PerfilacionSencilla()" id="refresh">Perfilación sencilla</li>
+                        <li class="li" onclick="PerfilacionAnalisisCompleto()" id="refresh">Análisis completo</li>
+                        <li class="li" onclick="analisisComercial()" id="refresh">Analisís comercial</li>
+                       
+                    </ul>
+                    <div class="subcontenedor">
+                        <!--Tabla prueba de taza-->
+                        <div class="bloque activo">
+                            <table id="tabla_prueba_taza" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                <tbody id ="listamuestrasproducto">
+                                </tbody> 
+                                <tfoot>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!--Tabla analisis basico-->
+                        <div class="bloque">
+                            <table id="tabla_analisis_basicos" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                <tbody id ="listamuestrasproducto">
+                                </tbody> 
+                                <tfoot>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="bloque">
+                            <table id="tabla_perfilacion_sencilla" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                <tbody id ="listamuestrasproducto">
+                                </tbody> 
+                                <tfoot>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="bloque">
+                            <table id="tabla_analisis_completo" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                <tbody id ="listamuestrasproducto">
+                                </tbody> 
+                                <tfoot>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="bloque">
+                            <table id="tabla_analisis_comercial" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                <tbody id ="listamuestrasproducto">
+                                </tbody> 
+                                <tfoot>
+                                    <tr>
+                                        <th>Tipoanalisis</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Código</th>
+                                        <th>Fecha</th>
+                                        <th>Proceso</th>
+                                        <th>Humedad</th>
+                                        <th>Origen</th>
+                                        <th>Observaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<script src="js/script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="js/config.js"></script>
+<script src="js/lading.js"></script>
+<script src="js/consultarPruebaTaza.js"></script>
+<script src="js/consultarAnalisisBasico.js"></script>
+<script src="js/consultarPerfilacionSencilla.js"></script>
+<script src="js/consultarAnalisisCompleto.js"></script>
+<script src="js/consultarAnalisisComercial.js"></script>
+<script src="js/logout.js"></script>
+</body>
+</html>
