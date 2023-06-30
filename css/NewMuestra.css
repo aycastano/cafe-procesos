@@ -1,0 +1,196 @@
+.margin{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    
+}
+/*header*/
+.header{
+    width: 100%;
+    background-color: #3F3244;
+    display: grid;
+    grid-template-columns: auto auto auto 15%;
+    grid-template-rows: auto;
+    color: #FFFFFf;
+}
+.logo{
+    padding: 1em 1em 1em 1em;
+     
+}
+.iconuser{
+  text-align: center;
+  padding: 1.5em 1em 1em 1em;
+}
+
+.text{
+    font-family: Montserrat;
+    font-size: 1vw;
+    padding: 2.5em 1em 1em 1em;
+}
+
+.logout{
+    text-align: left;
+    padding: 1.5em 1em 1em 1em;
+}
+/*fin de header*/
+
+/*franja*/
+.subheader{
+    width: 100%;
+    background-color: #F7F7F7;
+    font-family: Montserrat;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 0.8vw;
+}
+.textfranjaverde{
+    color: #5B7900;
+    font-weight: 700;
+    font-size: 0.8vw;
+}
+/*fin franja*/
+/*imagenes*/
+.imglogo{
+    width:40%;
+  }
+
+.imguser{
+    width:40%;
+}
+.imglogout{
+    width: 100%;
+    vertical-align: center;
+}
+.imgeditar{
+    width: 100%;
+}
+.imgeliminar{
+    width: 100%;
+}
+/* fin imagenes*/  
+
+/*global*/
+.divglobal{
+      background-color: #FFFFFf;
+     
+   }
+/*div1*/
+.div1{
+    background-color:#F8F8F8;
+    border-radius: 8px;
+    width: 80%;
+    height: 150px;
+    padding: 2em 1em 1em 1em;
+    margin: 0px auto;
+    
+}
+.contenedornuevamuestra{
+    background-color:#D8D8F6;
+    border-radius: 8px;
+    width: 98%;
+    display: grid;
+    grid-template-columns: auto 15% 15%;
+}
+.titulo{
+    font-size: 1vw;
+    text-align: left;
+    padding: 1.5em 1em 1em 1em;
+    font-weight: 700;
+    font-family: Montserrat;
+}
+.editarmuestra{
+      padding: 1em 1em 1em 1em;
+}
+.eliminarmuestra{
+    padding: 1em 1em 1em 1em;
+}
+.selectores{
+    width: 65%;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto 10px auto;
+  
+
+}
+.optionselector{
+    font-size: 1vw;
+    color: #545454;
+    font-family: Montserrat;
+ }
+ .inputselector{
+    width: 80%;
+    height: 30px;
+    padding: 0px 15px;
+    border: 1px solid #E5E5E5;
+    border-radius: 6px;
+    font-family: Montserrat;
+    color: #545454;
+    font-size: 1vw;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
+ }
+ .inputselector:focus{
+    color: #5B7900;
+    box-shadow: 0 0 1px 3px #5B7900;
+    outline: none;
+ }
+/*fin div1*/
+/*incio div2*/
+.div2{
+    margin: 0px auto;
+    background-color:#F8F8F8;
+    border-radius: 8px;
+    width: 80%;
+    height: 600px;
+
+   
+}
+.pasos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    color: #FFFFFF;
+ 
+}
+/*imagenes de los pasos*/
+.imgmuestras{
+    width:100%;
+    height:80%;
+    border-radius: 8px 0px 0px 0px;
+}
+.imgfisico{
+    width: 100%;
+    height:80%;
+}
+.imgsensorial{
+    width: 100%;
+    height:80%;
+    border-radius: 0px 8px 0px 0px;
+}
+/*fin de las imagenes de los pasos*/
+/*inicio  barra de busqueda*/
+.barrabusqueda{
+    width: 80%;
+    height: 45px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #D8D9F347;
+    margin-left: 10%;
+    
+  
+}
+.productor{
+    background-color: #5B7900;
+}
+.empresa{
+    background-color: #545454;
+}
+.textoseleccionar{
+    background-color: aquamarine;
+}
+.inputbusqueda{
+    background-color: tomato;
+}
+/*fin barra de busqueda*/
+
+/*fin div2*/
+/*fin global*/

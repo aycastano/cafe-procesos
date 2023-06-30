@@ -112,9 +112,10 @@
 
 
 .contenedor{
-    /* background-color: lightgray;*/
+  /* background-color: lightgray;*/
      max-width: 120em;
      width: 90%;
+     height: 100%;
      padding: 1em;
   }
   .contenedor .ul{
@@ -136,12 +137,12 @@
  
   }
   .contenedor .li.activo{
-     background-color: red;
+     background-color: #5B7900;
      color: white;
  
   }
   .contenedor .subcontenedor{
-     min-height: 30vh;
+     min-height: 90vh;
      /*background-color: aqua;*/
      position:relative;
   }
@@ -195,7 +196,7 @@
 }
 .optionselector{
    font-size: 2vh;
-   color: #545454;
+   color: #DCDCDC;
    font-family: Montserrat;
 }
 
@@ -210,4 +211,7 @@
  .cont{
    background-color: #FFFFFF;
    margin-left: 10%;
+ }
+.global{
+   background: grey;
  }
