@@ -6,8 +6,8 @@ function login(){
    let email ="";
    let contraseña = "";
 
-   console.log(usuario);
-   console.log(password);
+   console.log("usuario:"+usuario);
+   console.log("password"+password);
 
 
    db.collection("Usuarios").where("email", "==", usuario)

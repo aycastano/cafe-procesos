@@ -27,7 +27,7 @@ li.forEach((cadaLi , i)=>{
 })
 
 function crearMuestra(){
-    location.replace("nuevaMuestra.html");
+    location.replace("nuevaMuestraProductor.html");
 }
 
 function verMuestra(){
