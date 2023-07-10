@@ -4,44 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/display.css">
-    <title>Cafe & Procesos</title>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Login</title>
 </head>
 <body>
-    <div class="conteiner">
-        <div class="itemsderecho">
-            <img src="resources/cafe_login.png" class = "photoMain">
+    <div class="container">
+        <div class="ContainerLeft">
+            <img src="resources/cafe_login.png" class="photo">
         </div>
-        <div class="itemsizquierda">
-            <img src="resources/Log-login.png" class = "photoLogin">
-            <form action="index" class="formulario">
-                <div>
-                    <label id="user" class="labels">Usuario</label>
+        <div class="containerRigth">
+            <div class="header">
+                <div class="f1">
+                    <img class = "photoLogo" src="resources/Loglogin.png">
                 </div>
-                <div>
-                    <input type="text" id="usuario" class="input">
-                </div>
-                <br>
-                <div>
-                    <label id="pass" class="labels">password</label>
-                </div>
-                <div>
-                    <input type="password" id="password" class="input" >
-                </div>
-                
-                <br>
-                <label id="pass" class="forgetPass"> <u>Olvidé mi contraseña</u></label>
-                <br>
-                <input  value="Inicar sesion" onclick="login()" class="btn">
-            </form>
+                <div style="height: 50px;"></div>
+                <form class="form">
+                    <div class="f2">
+                        <label class="optionselector">Usuario</label>
+                        <div style="height: 5px;"></div>
+                        <input class="input" type="text" id="User" placeholder="Usuario" required>
+                    </div>
+                    <div style="height: 20px;"></div>
+                    <div class="f3">
+                        <label class="optionselector">Contraseña</label>
+                        <div style="height: 5px;"></div>
+                        <input class="input" type="password" id="password" placeholder="Contraseña" required>
+                        <div style="height: 5px;"></div>
+                        <label class="forgetpass">Olvidé mi contraseña</label>
+                    </div>
+                    <div style="height: 70px;"></div>
+                    <div class="f4">
+                        <button class='btn' id="login" onclick="login()">Iniciar Sesión</button>
+                    </div>
+                    
+                </form>
+            </div>
+            
         </div>
-     
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/config.js"></script>
+     <script src="js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
+    
 </body>
 </html>
