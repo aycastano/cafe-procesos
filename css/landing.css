@@ -4,7 +4,12 @@
     box-sizing: border-box;
 }
 .header{
+   width: 100%;
    background-color: #3F3244;
+   display: grid;
+   grid-template-columns: auto auto auto 15%;
+   grid-template-rows: auto;
+   color: #FFFFFf;
 }
 .container{
    
@@ -24,20 +29,27 @@
 
 }
 .containerderecho{
-    width: 90%;
-    background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 5% 2% 6% auto;
  
 }
 .containerizquierdo{
-    width: 10%;
-    height: 600px;
-   background-color: #5C4A59;
+    background-color: #5C4A59;
+    height: 1000px;
 }
 
 .containerbody{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+   grid-template-columns: 10% auto;
 }
+.logo{
+   padding: 1em 1em 1em 1em;
+    
+}
+.imglogo{
+   width:40%;
+ }
 .frame_logo {
     padding: 1em 1em 1em 1em;
     width: 25%;
@@ -46,6 +58,13 @@
     /*background-color: red;*/
     /*vertical-align: center;*/
  }
+ .iconuser{
+   text-align: center;
+   padding: 1.5em 1em 1em 1em;
+ }
+ .imguser{
+   width:40%;
+}
  .icon_usuario{
     padding: 1em 1em 1em 1em;
      width: 50%;
@@ -76,21 +95,16 @@
  /*    height: 10px; */
     background-color:#F7F7F7;
     font-family: Montserrat;
-    font-size: 80%;
+    font-size: 1vw;
  
  }
 .pruebataza{
     color: #5B7900;
-    font-size: 90%;
+    font-size: 1vw;
     padding: 1em 0 0 1em;
+    font-weight: 700;
 }
-.pruebatazauno{
 
-    color: #5B7900;
-    font-size: 90%;
-    padding: 1em 0 0 1em;
-
-}
 .lineagris{
     vertical-align: center;
     width: 100%;
@@ -99,6 +113,7 @@
 }
 .table2{
     width: 100%;
+    
    /*background-color: aqua;*/
    
 }
@@ -114,47 +129,60 @@
 
      /* background-color: #5C4A59; */
  }
- .btn3 {
-   width: 25%;
-   padding: 1em 1em 1em 1em;
-   margin-left: 50;
-   /* background-color: red; */
-   text-align: center;
-}
- .btncrearmuestra{
+ .contenedorbtn3 {
+   width: 90%;
+   margin-left: 5%;
+   display: grid;
+   grid-template-columns: auto auto 15%;
 
-    width: 50%;
-    /*margin-left: 25em;*/
+}
+.btn3{
+   padding: 1em 1em 1em 1em;
+}
+.text{
+   font-family: Montserrat;
+   font-size: 1vw;
+   padding: 2.5em 1em 1em 1em;
+}
+
+.logout{
+   text-align: left;
+   padding: 1.5em 1em 1em 1em;
+}
+.imglogout{
+   width: 100%;
+   vertical-align: center;
+}
+ .imgcrearmuestra{
+    width: 100%;
     cursor: pointer;
+    
  }
  .contenedor{
-    /* background-color: lightgray;*/
-     max-width: 120em;
-     width: 100%;
-    /* margin-left:5em;*/
-    /* padding: 1em;*/
-    
+     width: 90%;
+     margin-left: 5%;
+ 
   }
   .contenedor .ul{
      width:100%;
-     background-color: #F3F3F3;
      display: flex;
      flex-flow: row nowrap;
      justify-content: flex-start;
      align-items: center;
      list-style:none;
-     border-radius:10px;
- 
+     padding: 1em 1em 1em 1em;
+     background-color: #F3F3F3;
+     border-radius: 6px;
   }
   .contenedor .li{
      /*background-color: green;*/
-     padding: 0.5em 0.5em 0.5em 0.5em;
+     padding: 1em 1em 1em 1em;
      margin: 0 1em 0 0;
      transition: all .5s ease;
      cursor: pointer;
      background-color: #F3F3F3;
-     border-radius: 10px;
      font-size: 1vw;
+     border-radius: 3px;
  
   }
   .contenedor .li.activo{
@@ -167,6 +195,7 @@
      /*min-height: 30vh;*/
      background-color: aqua;
      position:relative;
+  
     
   }
   .contenedor .bloque{
@@ -177,6 +206,8 @@
      top: 0;
      opacity: 0;
      transition: all .5s ease;
+     display: grid;
+     grid-template-columns: auto;
   }
   .contenedor .bloque.activo{
      opacity: 1;
@@ -189,7 +220,7 @@
   }
   .contenedor1{
     margin-left: 5%;
-    width: 80%;
+    width: 100%;
     /*background-color: #F3F3F3;*/
    /* margin-left: 5%;*/
    border-radius: 12px;
@@ -223,6 +254,22 @@ input.image_buscar {
 	position: relative;
 	top:1px;
    
+}
+.input{
+   border: 0px;
+	width: 100%;
+	position: relative;
+	background: transparent;
+	outline: none;
+	bottom: 4px;
+	padding: 2px;
+   background-color: #FFFFFF;
+   font-family: Montserrat;
+   border-color: none;
+}
+.input:focus{
+   box-shadow: 0 0 1px 3px #5B7900;
+   outline: none;
 }
 .th{
    padding: 0.5em 1.4em 0.5em 2em;   
