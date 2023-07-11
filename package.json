@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-   
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@firebase/app": "^0.9.14",
+    "@firebase/firestore": "^4.0.0",
     "firebase": "^8.10.1"
   },
   "description": ""
-  
 }
