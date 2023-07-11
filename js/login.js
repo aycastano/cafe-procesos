@@ -1,4 +1,24 @@
-function login(){
+const buttom = document.getElementById('button');
+const User =   document. getElementById('User');
+
+
+
+buttom.addEventListener('click',()=>{
+    console.log("usuario:");
+   
+    let usuario  = document.getElementById("usuario").value;
+   let password = document.getElementById("password").value;
+   let existe = "0";
+   let email ="";
+   let contraseña = "";
+
+   console.log("usuario:"+usuario);
+   console.log("password"+password);
+})
+
+
+
+/*function login(){
 
    let usuario  = document.getElementById("usuario").value;
    let password = document.getElementById("password").value;
@@ -41,8 +61,8 @@ function login(){
         
     }, 2000);
 
-   
+  
 
  
 
-}
+} */
