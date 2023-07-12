@@ -1,20 +1,56 @@
-const buttom = document.getElementById('button');
-const User =   document. getElementById('User');
+import {  getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+//import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
 
+import {auth} from './firebase.js'
 
+const user = document.getElementById("User");
+const password = document.getElementById ("password");
+const form = document.getElementById("form");
 
-buttom.addEventListener('click',()=>{
-    console.log("usuario:");
+form.addEventListener("submit",e=>{
+   e.preventDefault()
+   console.log("user"+user.value);
+   console.log("pass"+password.value);
    
-    let usuario  = document.getElementById("usuario").value;
-   let password = document.getElementById("password").value;
-   let existe = "0";
-   let email ="";
-   let contraseña = "";
+   const email = user.value;
+   const password = password.value;
 
-   console.log("usuario:"+usuario);
-   console.log("password"+password);
+
+   const auth = getAuth();
+signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log("logueado"+user);
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+   
+   
+
+
 })
+
+
+
+
+
+
+
+/*function Login(){
+
+    let usuario  = document.getElementById("User").value;
+    let password = document.getElementById("password").value;
+    let existe = "0";
+    let email ="";
+    let contraseña = "";
+    console.log("password"+password);
+
+}*/
+
 
 
 
